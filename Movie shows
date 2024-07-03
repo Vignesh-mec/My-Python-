@@ -1,0 +1,45 @@
+You are developing a simple recommendation system for a streaming service. Based on a user's age and their preferred genre, the system will recommend a type of movie or show. The recommendations are as follows:
+
+If the user's age is less than 13, recommend "Animated Movies" if the preferred genre is "animation". Otherwise, recommend "Kids Shows".
+
+If the user's age is between 13 and 17, recommend "Teen Movies" if the preferred genre is "drama" or "comedy". Otherwise, recommend "Teen Shows".
+
+If the user's age is 18 or above, recommend "Action Movies" if the preferred genre is "action". If the preferred genre is "romance", recommend "Romance Movies". For any other genre, recommend "Documentaries".
+
+Input Format:
+
+An integer representing the user's age.
+
+A string representing the user's preferred genre.
+
+Output Format:
+
+A string representing the recommended type of movie or show.
+
+solution:
+
+age=int(input())
+genre=input()
+if age<13:
+    if genre=="animation":
+        print("Animated Movies")
+    else:
+        print("Kids Shows")
+
+if age in range(13,18):
+    if genre=="drama":
+        print("Teen Movies")
+    elif genre=="comedy":
+        print("Teen Movies")
+    else:
+        print("Teen Shows")
+        
+if age>18:
+    if genre=="action":
+        print("Action Movies")
+    elif genre=="romance":
+        print("Romance Movies")
+    elif genre=="thriller":
+        print("Thriller Movies")
+    else:
+        print("Documentaries")
