@@ -1,0 +1,35 @@
+You are developing a simple financial advisor tool that helps users decide whether they can afford to buy a car. The decision is based on the user's monthly income, current savings, and the price of the car. The rules for the decision are as follows:
+
+If the user's savings are greater than or equal to 50% of the car's price, recommend "Buy the car".
+
+If the user's monthly income is greater than 20% of the car's price, recommend "Finance the car".
+
+Otherwise, recommend "Save more money".
+
+Input Format:
+
+An integer representing the user's monthly income.
+
+An integer representing the user's current savings.
+
+An integer representing the price of the car.
+
+Output Format:
+
+A string representing the financial advice.
+
+SOLUTION:
+
+inc=int(input())
+sav=int(input())
+pri=int(input())
+a=pri/2
+b=(pri/100)*20
+if sav>a:
+    print("Buy the car")
+elif inc>b:
+    print("Finance the car")
+else:
+    print("Save more money")
+    
+
